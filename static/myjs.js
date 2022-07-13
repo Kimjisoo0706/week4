@@ -81,10 +81,20 @@ function get_posts(username) {
                     let time_post = new Date(post["date"])
                     let time_before = time2str(time_post)
 
+                    let gu = posts[i]['gu']
+                    let dong = posts[i]['dong']
+                    let star = posts[i]['chung']
+                    let star1 = posts[i]['ann']
+                    let star2 = posts[i]['gyo']
+                    let star3 =posts[i]['pyun']
+
+                    let star_image = '⭐'.repeat(star)
+                    let star1_image = '⭐'.repeat(star1)
+                    let star2_image = '⭐'.repeat(star2)
+                    let star3_image = '⭐'.repeat(star3)
+
                     let class_heart = post['heart_by_me'] ? "fa-heart" : "fa-heart-o"
                     let count_heart = post['count_heart']
-
-
 
 
                     let html_temp = `<div class="box" id="${post["_id"]}">
@@ -100,10 +110,14 @@ function get_posts(username) {
                                                     <p>
                                                         <strong>${post['profile_name']}</strong> <small>@${post['username']}</small> <small>${time_before}</small>
                                                         <br>
-                                                        ${post['gu']}
-                                                        ${post['dong']}
-                                                        ${post['chung']}
-                                                    </p>
+                                                       </p>
+                                                  <p>${gu}</p>
+                                                  <p>${dong}</p>
+                                                  <p>청결점수:${star_image}</p>
+                                                  <p>안전점수:${star1_image}</p>
+                                                  <p>교통점수:${star2_image}</p>
+                                                  <p>편리점수:${star3_image}</p>
+
                                                 </div>
                                                 <nav class="level is-mobile">
                                                     <div class="level-left">
