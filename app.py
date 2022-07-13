@@ -132,19 +132,30 @@ def posting():
     try:
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
         user_info = db.users.find_one({"username": payload["id"]})
-        comment_receive = request.form["comment_give"]
+        gu_receive = request.form['gu_give']
+        dong_receive = request.form['dong_give']
+        chung_receive = request.form['chung_give']
+        ann_receive = request.form['ann_give']
+        gyo_receive = request.form['gyo_give']
+        pyun_receive = request.form['pyun_give']
         date_receive = request.form["date_give"]
         doc = {
             "username": user_info["username"],
             "profile_name": user_info["profile_name"],
             "profile_pic_real": user_info["profile_pic_real"],
-            "comment": comment_receive,
+            'gu': gu_receive,
+            'dong': dong_receive,
+            'chung': chung_receive,
+            'ann': ann_receive,
+            'gyo': gyo_receive,
+            'pyun': pyun_receive,
             "date": date_receive
         }
         db.posts.insert_one(doc)
-        return jsonify({"result": "success", 'msg': '포스팅 성공'})
+        return jsonify({"result": "success", 'msg': '입력 완료'})
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return redirect(url_for("home"))
+
 
 
 @app.route("/get_posts", methods=['GET'])
