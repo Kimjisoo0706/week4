@@ -37,16 +37,17 @@
     function newPage() {
         window.location.href = 'http://localhost:5000/user/sparta1234'
     }
-            function sign_out() {
-            $.removeCookie('mytoken', {path: '/'});
-            alert('로그아웃!')
-            window.location.href = "/login"
-        }
+
+    function sign_out() {
+        $.removeCookie('mytoken', {path: '/'});
+        alert('로그아웃!')
+        window.location.href = "/login"
+    }
 
 
-        function go_user() {
-            window.location.href = href="/user/{{ user_info.username }}"
-        }
+    function go_user() {
+        window.location.href = href = "/user/{{ user_info.username }}"
+    }
 </script>
 
 
@@ -179,6 +180,145 @@
                 onclick='$("#modal-post").removeClass("is-active")'></button>
     </div>
 </section>
+<div class="check-boxabc">
+    <div class="check-boxa">
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강남구_checkbox"
+               onclick="checking(event)" value="강남구">
+        <label style="cursor:pointer" class="form-check-label" for="강남구_checkbox">강남구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강동구_checkbox"
+               onclick="checking(event)" value="성동구">
+        <label style="cursor:pointer" class="form-check-label" for="강동구_checkbox">강동구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강북구_checkbox"
+               onclick="checking(event)" value="강북구">
+        <label style="cursor:pointer" class="form-check-label" for="강북구_checkbox">강북구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강서구_checkbox"
+               onclick="checking(event)" value="강서구">
+        <label style="cursor:pointer" class="form-check-label" for="강서구_checkbox">강서구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="관악구_checkbox"
+               onclick="checking(event)" value="관악구">
+        <label style="cursor:pointer" class="form-check-label" for="관악구_checkbox">관악구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="광진구_checkbox"
+               onclick="checking(event)" value="광진구">
+        <label style="cursor:pointer" class="form-check-label" for="광진구_checkbox">광진구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="구로구_checkbox"
+               onclick="checking(event)" value="구로구">
+        <label style="cursor:pointer" class="form-check-label" for="구로구_checkbox">구로구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="금천구_checkbox"
+               onclick="checking(event)" value="금천구">
+        <label style="cursor:pointer" class="form-check-label" for="금천구_checkbox">금천구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="노원구_checkbox"
+               onclick="checking(event)" value="노원구">
+        <label style="cursor:pointer" class="form-check-label" for="노원구_checkbox">노원구</label>
+    </div>
+
+</div>
+<div class="check-boxb">
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="도봉구_checkbox"
+               onclick="checking(event)" value="도봉구">
+        <label style="cursor:pointer" class="form-check-label" for="도봉구_checkbox">도봉구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="동대문구_checkbox"
+               onclick="checking(event)" value="동대문구">
+        <label style="cursor:pointer" class="form-check-label" for="동대문구_checkbox">동대문구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="동작구_checkbox"
+               onclick="checking(event)" value="동작구">
+        <label style="cursor:pointer" class="form-check-label" for="동작구_checkbox">동작구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="마포구_checkbox"
+               onclick="checking(event)" value="마포구">
+        <label style="cursor:pointer" class="form-check-label" for="마포구_checkbox">마포구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="서대문구_checkbox"
+               onclick="checking(event)" value="서대문구">
+        <label style="cursor:pointer" class="form-check-label" for="서대문구_checkbox">서대문구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="서초구_checkbox"
+               onclick="checking(event)" value="서초구">
+        <label style="cursor:pointer" class="form-check-label" for="서초구_checkbox">서초구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="성동구_checkbox"
+               onclick="checking(event)" value="성동구">
+        <label style="cursor:pointer" class="form-check-label" for="성동구_checkbox">성동구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="성북구_checkbox"
+               onclick="checking(event)" value="성북구">
+        <label style="cursor:pointer" class="form-check-label" for="성북구_checkbox">성북구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="송파구_checkbox"
+               onclick="checking(event)" value="송파구">
+        <label style="cursor:pointer" class="form-check-label" for="송파구_checkbox">송파구</label>
+    </div>
+
+
+</div>
+<div class="check-boxc">
+        <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="양천구_checkbox"
+               onclick="checking(event)" value="양천구">
+        <label style="cursor:pointer" class="form-check-label" for="양천구_checkbox">양천구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="영등포구_checkbox"
+               onclick="checking(event)" value="영등포구">
+        <label style="cursor:pointer" class="form-check-label" for="영등포구_checkbox">영등포구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="용산구_checkbox"
+               onclick="checking(event)" value="용산구">
+        <label style="cursor:pointer" class="form-check-label" for="용산구_checkbox">용산구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="은평구_checkbox"
+               onclick="checking(event)" value="은평구">
+        <label style="cursor:pointer" class="form-check-label" for="은평구_checkbox">은평구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="종로구_checkbox"
+               onclick="checking(event)" value="종로구">
+        <label style="cursor:pointer" class="form-check-label" for="종로구_checkbox">종로구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="중구_checkbox"
+               onclick="checking(event)" value="중구">
+        <label style="cursor:pointer" class="form-check-label" for="중구_checkbox">중구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="중랑구_checkbox"
+               onclick="checking(event)" value="중랑구">
+        <label style="cursor:pointer" class="form-check-label" for="중랑구_checkbox">중랑구</label>
+    </div>
+</div>
+</div>
+
+
+
 <section class="section">
     <div id="post-box" class="container">
         <div class="box">
