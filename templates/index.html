@@ -23,6 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="{{ url_for('static', filename='myjs.js') }}"></script>
+
     <script>
         $(document).ready(function () {
             get_posts()
@@ -36,19 +37,42 @@
     function newPage() {
         window.location.href = 'http://localhost:5000/user/sparta1234'
     }
+            function sign_out() {
+            $.removeCookie('mytoken', {path: '/'});
+            alert('로그아웃!')
+            window.location.href = "/login"
+        }
+
+
+        function go_user() {
+            window.location.href = href="/user/{{ user_info.username }}"
+        }
 </script>
+
 
 <body>
 
-<nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="{{ url_for('static', filename='logo.png') }}">
-            <strong class="is-sparta"
-                    style="font-family: 'Stylish', sans-serif;font-size: larger;">SWEETER</strong>
-        </a>
+<header>
+    <h1>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong class="is-sparta">동네 어때</strong>
+            </a>
+        </div>
+    </h1>
+    <nav>
+        <div class="b">
+            <button onclick="go_user()">마이페이지</button>
+            <button onclick="sign_out()">로그아웃</button>
+        </div>
+    </nav>
+    <div class="banner_set">
+        <div class="banner" onclick="window.location.href='/'"></div>
+        <span class="nickname_banner">
+            <span class="nickname">{{ user_info.nickname }}</span>님,
+                    안녕하세요.</span>
     </div>
-</nav>
+</header>
 
 <section class="section">
     <article class="media">
