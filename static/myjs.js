@@ -86,7 +86,7 @@ function get_posts(username) {
                     let star = posts[i]['chung']
                     let star1 = posts[i]['ann']
                     let star2 = posts[i]['gyo']
-                    let star3 =posts[i]['pyun']
+                    let star3 = posts[i]['pyun']
 
                     let star_image = '⭐'.repeat(star)
                     let star1_image = '⭐'.repeat(star1)
@@ -168,4 +168,7 @@ function num2str(count) {
     }
     return count
 }
+
+
+
 
